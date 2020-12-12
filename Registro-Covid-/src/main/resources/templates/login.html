@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Insert title here</title>
+
+<!-- JQUERY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Estilos de BOOSTRAP -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://maxcdn.booststrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="modal-dialog text-center">
+		<div class="col-sm-8 main-section">
+			<div class="modal-content">
+				<div class="col-12 user-img">
+					<img alt="" src="">
+					<div >Login</div>
+				</div>
+					<form class="col-12" th:action="@{/login}" method="post">
+						<div class="form-group" id="user-group">
+							<input type="text" class="form-control" placeholder="Nombre de usuario" name="username">
+						</div>
+						<div class="form-group" id="contrasena-group">
+						<input type="password" class="form-control" placeholder="Contraseña" name="password">
+						</div>
+							<button type="submit" class="btn btn-primary"><i class="fas fa-sing-in-alt"></i>Entrar</button>
+							<button type="submit" class="btn btn-primary"><i class="fas fa-sing-in-alt"></i>Registrarse</button>
+					</form>
+						<div class="col-12 forgot">
+							<a href="#">Recordar contraseña</a>
+						</div>
+						<div th:if="${param.error}" class="alert alert-danger" role="alert">
+						invalid username and pasword.
+						</div>
+						<div th:if="${param.error}" class="alert alert-success" role="alert">
+						You have been logged out.
+						</div>
+			</div>
+		</div>
+	</div>
+<button type="submit" class="btn btn-primary"><i class="fas fa-sing-in-alt"></i>Inicio</button>
+
+
+</body>
+</html>
