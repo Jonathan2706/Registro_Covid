@@ -63,6 +63,7 @@ public class UserController {
 	public String signupAction(@Valid @ModelAttribute("userForm")User user, BindingResult result, ModelMap model) {
 		Role userRole = roleRepository.findByName("USER");
 		List<Role> roles = Arrays.asList(userRole);
+		model.addAttribute("editMode",true);
 		model.addAttribute("userForm", user);
 		model.addAttribute("roles",roles);
 		model.addAttribute("signup",true);
