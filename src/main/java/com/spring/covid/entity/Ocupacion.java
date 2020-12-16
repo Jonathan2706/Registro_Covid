@@ -11,14 +11,12 @@ import javax.persistence.Id;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-public class Role implements Serializable{
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 6353963609310956029L;
+public class Ocupacion implements Serializable{
 
 	
+
+	private static final long serialVersionUID = 2961071744244880471L;
+
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO, generator="native")
 	@GenericGenerator(name="native",strategy="native")
@@ -54,6 +52,9 @@ public class Role implements Serializable{
 		this.description = description;
 	}
 	
+	
+
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -72,7 +73,7 @@ public class Role implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Role other = (Role) obj;
+		Ocupacion other = (Ocupacion) obj;
 		if (description == null) {
 			if (other.description != null)
 				return false;
