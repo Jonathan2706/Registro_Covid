@@ -23,10 +23,13 @@ public class Ocupacion implements Serializable{
 	private Long id;
 	
 	@Column
-	private String name;
+	private String positivo;
 	
 	@Column
-	private String description;
+	private String negativo;
+	
+	@Column
+	private String hospital;
 
 	public Long getId() {
 		return id;
@@ -36,32 +39,44 @@ public class Ocupacion implements Serializable{
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getPositivo() {
+		return positivo;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setPositivo(String positivo) {
+		this.positivo = positivo;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getNegativo() {
+		return negativo;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setNegativo(String negativo) {
+		this.negativo = negativo;
 	}
-	
-	
 
-	
+	public String getHospital() {
+		return hospital;
+	}
+
+	public void setHospital(String hospital) {
+		this.hospital = hospital;
+	}
+
+	@Override
+	public String toString() {
+		return "Ocupacion [id=" + id + ", positivo=" + positivo + ", negativo=" + negativo + ", hospital=" + hospital
+				+ "]";
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((description == null) ? 0 : description.hashCode());
+		result = prime * result + ((hospital == null) ? 0 : hospital.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((negativo == null) ? 0 : negativo.hashCode());
+		result = prime * result + ((positivo == null) ? 0 : positivo.hashCode());
 		return result;
 	}
 
@@ -74,28 +89,30 @@ public class Ocupacion implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Ocupacion other = (Ocupacion) obj;
-		if (description == null) {
-			if (other.description != null)
+		if (hospital == null) {
+			if (other.hospital != null)
 				return false;
-		} else if (!description.equals(other.description))
+		} else if (!hospital.equals(other.hospital))
 			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (name == null) {
-			if (other.name != null)
+		if (negativo == null) {
+			if (other.negativo != null)
 				return false;
-		} else if (!name.equals(other.name))
+		} else if (!negativo.equals(other.negativo))
+			return false;
+		if (positivo == null) {
+			if (other.positivo != null)
+				return false;
+		} else if (!positivo.equals(other.positivo))
 			return false;
 		return true;
 	}
+	
+	
+	
 
-	@Override
-	public String toString() {
-		return "Role [id=" + id + ", name=" + name + ", description=" + description + "]";
-	}
-	
-	
 }
