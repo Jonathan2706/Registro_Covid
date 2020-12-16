@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>User Information and Form</title>
-	
-	<!--JQUERY-->
-	<script
- 		src="https://code.jquery.com/jquery-3.3.1.min.js"
- 			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
- 			crossorigin="anonymous"></script>
-	
-	<link rel="stylesheet"
-		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script 
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	
-	<!-- Los iconos tipo Solid de Fontawesome-->
-	<link rel="stylesheet"
-		href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
-	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-	
-	<!-- Nuestro css-->
-	<link rel="stylesheet" type="text/css" href="static/css/user-form.css"
-		th:href="@{/css/user-form.css}">
+<title>Registros</title>
+
+<!--JQUERY-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+
+<!-- Los iconos tipo Solid de Fontawesome-->
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+<!-- Nuestro css-->
+<link rel="stylesheet" type="text/css" href="static/css/user-form.css"
+	th:href="@{/css/user-form.css}">
 
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="#"><b>Iniciar
+						sesion</b> <span class="sr-only">(current)</span> </a></li>
+				<li class="nav-item"><a class="nav-link" href="ingresar">Modificar</a></li>
+				<li class="nav-item"><a class="nav-link" href="/principal">Covid-19 FCP</a></li>
+			</ul>
+		</div>
+	</nav>
 	<div class="container">
-		<div class="mx-auto col-sm-8 main-section" >
+		<div class="mx-auto col-sm-8 main-section">
 			<div class="card">
 				<div class="card-header">
 					<h4 align="center">Registro</h4>
 				</div>
 				<div class="card-body">
-					<div th:include="user-form/user-form.html" th:remove="tag" ></div>
+					<div th:include="user-form/user-form.html" th:remove="tag"></div>
 				</div>
 			</div>
 		</div>

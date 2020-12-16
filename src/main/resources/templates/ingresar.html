@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<!--JQUERY-->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Los iconos tipo Solid de Fontawesome-->
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+<!-- Nuestro css-->
+<link rel="stylesheet" type="text/css" href="static/css/principal.css"
+	th:href="@{/css/principal.css}">
+<title>Covid-19 FCP</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="#"><b>Modificar
+				</b> <span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="/userForm">Volver</a></li>
+				<li class="nav-item"><a class="nav-link" href="/principal">Covid-19 FCP</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div id="general" align="center">
+		<div id="mapa">
+			<img alt="" src="img/unnamed.gif" width="90%" height="90%">
+		</div>
+		<div id="resto">
+			<div id="centrado"><br><input name="ingresatexto" style="background-color:transparent; width:60%;" type="text" /></div>
+			<div id="derecha"><br><input name="ingresatexto2" style="background-color:transparent; width:60%;" type="text"  /></div>
+			<div id="izquierda"><br><input name="ingresatexto3" style="background-color:transparent; width:60%;" type="text"  /></div>
+			<div id="text_derecha" style="border-radius: 40px;"><font size=3 color="white">Ocupasion Hospitalaria</font></div>
+			<div id="text_izquierda" style="border-radius: 40px;">
+			<font size=3 color="white">Positivos</font>
+			</div>
+			<div id="text_centrado" style="border-radius: 40px;"><font size=3 color="white">Negativos</font></div>
+			<div id="titulo" style="border-radius: 40px;">
+				<b><font size=6 color="white" >FELIPE CARRILLO PUERTO</font></b>
+			</div>
+			
+			<div id="fecha">
+				<b>
+				<script type="text/javascript">
+					var d = new Date();
+					var fec = (d.getDate() + '/' + '12/'
+							+ d.getFullYear());
+					document.write(fec.fontsize(5));
+				</script>
+				</b>
+				<div id="boton" style="border-radius: 40px;"><a class="boton" href="/userForm" target="_blank">Guardar</a></div>
+			</div>
+		</div>
+	</div>
+	<footer><img alt="" src="/img/margen-abajo.png" width="100%" height="100%" align="left"></footer>
+	
+</body>
+</html>
