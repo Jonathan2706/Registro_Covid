@@ -18,6 +18,13 @@ public class Ocupacion implements Serializable{
 	// Conexion
 	
 	
+	
+	
+	
+	
+	
+	
+	
 
 	private static final long serialVersionUID = 2961071744244880471L;
 
